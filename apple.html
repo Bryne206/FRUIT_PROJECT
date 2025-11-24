@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VicAnn FRuiTies</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="apple.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            VicAnn <span>FRUITI's</span>
+        </div>
+
+        <div class="nav-links">
+            <ul>
+                <li>ABOUT</li>
+                <li>CONTACT</li>
+                <li>INFO</li>
+            </ul>
+            <i class="fas fa-search"></i>
+            <p>ADD TO CART</p>
+        </div>
+
+        <i class="fas fa-bars hamburger"></i>
+    </nav>
+    <main class="hero">
+        <div class="left">
+            <span>EAT FRESH<br> STAY HEALTHY ...</span>
+            <p>Apples are not just  tasty fruits, its more. Get to know the multiple 
+            health benefits of adding apples in your daily diet.
+            </p>
+            <div class="btn">
+                <button>Read More</button>
+                <button>Buy Now</button>
+            </div>
+        </div>
+        <img src="APPLES%20(1).png" alt="MYORANGE">
+    </main>
+    <footer>
+        <div class="footer">
+            <i class="fas"></i>
+        </div>
+    </footer>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

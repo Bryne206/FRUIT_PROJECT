@@ -1,0 +1,220 @@
+@charset "UTF-8";
+html {
+             min-height: 100%;
+            
+        }
+        body {
+            margin: 0;
+            background: linear-gradient(70deg, #ffffff 55%, #F3AA30 20%);
+            font-family: 'Poppins', sans-serif;
+            min-height: 100vh;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            position: relative;
+        }
+        .logo {
+            font-family: 'Bebas Neue', cursive;
+            font-size: 36px;
+            color: #010101;
+        }
+        .logo span{color: #437a06;text-transform: capitalize;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        .nav-links ul {
+            list-style: none;
+            display: flex;
+            gap: 60px;
+            padding: 0;
+            margin: 0;
+        }
+        .nav-links ul li{
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            position: relative;
+            padding: 10px;
+        }
+        .nav-links ul li:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #ffffff;
+            transition: width 0.5s ease;
+        }
+        .nav-links ul li:hover::after{
+            width: 100%;
+        }
+        .nav-links i{
+            cursor: pointer;
+            color:#437a06;
+            font-size: 30px;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: none;
+        }
+        .nav-links p {
+            cursor: pointer;
+            color: #437a06;
+            box-shadow:  2px 2px 5px 1px black;
+            background-color: #ffff;
+            padding: 10px 20px;
+            font-weight: 600;
+            border-radius: 20px;
+        }
+        .nav-links p:hover{
+            cursor: pointer;
+            box-shadow: -1px 2px 1px 1px black;
+            transition: all 0.5s;
+            color:  #437a06;
+        }
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #4f8613;
+        }
+        .hero{
+            min-height: 90vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+            padding: 20px;
+        }
+        .hero img{
+            width: 500px;
+            height: 500px;
+            object-fit: scale-down;
+        }
+        .left{
+            display: block;
+            max-width: 500px;
+        }
+        .left span{
+            word-spacing: 4.4px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 85px;
+            font-weight: 900;
+            color: #437a06;
+        }
+        .left p{
+            margin-top: 0;
+            max-width: 400px;
+            color: #504e4e;
+            line-height: 25px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .btn{
+            display: flex;
+            justify-content: space-between;
+            align-items:  center;
+            width: 250px;
+        }
+        .btn button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 7px 20px;
+            border-radius: 20px;
+            border: none;
+            font-family: 'Poppins', sans-serif;
+            color: #F3AA30;
+            background-color: #ffff;
+            cursor: pointer;
+            font-weight: 500;
+            box-shadow: 2px 2px 7px -1px black;
+        }
+        .btn button:hover{
+            transform: translateY(-5px);
+            transition: ease-in-out 0.5s;
+            box-shadow: 2px 2px 2px -1px black;
+            color: #437a06;
+            
+        }
+        /*MEnu for mobile screen*/
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                top: 60px;
+                right: 20px;
+                gap: 15px;
+                background: #ffffff;
+                padding: 10px;
+                border-radius: 5px;
+                border: 2px solid black;
+                box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+                display: none;
+            }
+            .nav-links ul li{
+                color: black;
+                font-weight: 500;
+                cursor: pointer;
+                position: relative;
+                padding: 10px;
+            }
+            .nav-links ul li:hover{
+                cursor: pointer;
+                color:black;
+                transition: all 0.5s;
+            }
+
+            .nav-links.show {
+                display: flex;
+            }
+            .hero{
+            height: 90vh;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+            .left span{
+                color: #437a06;
+            }
+
+            .hamburger {
+                display: block;
+                
+            }
+
+            .nav-links ul {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links i,
+            .nav-links p {
+                margin: 10px 0 0 0;
+                cursor: pointer;
+                color:  #437a06;
+                box-shadow: 2px 1px 4px -1px black;
+            }
+            .nav-links p:hover{
+                cursor: pointer;
+                box-shadow: -1px 2px 1px 1px  #2b4013;
+                transition: all 0.5s;
+            }
+            .nav-links ul li:after{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0%;
+            height: 2px;
+            background-color:  #437a06;
+            transition: width 0.5s ease;
+        }
+        }
